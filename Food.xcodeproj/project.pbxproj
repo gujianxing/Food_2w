@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		F60BB54E1C34D31500443DCB /* KindDetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60BB54D1C34D31500443DCB /* KindDetailHeaderCell.swift */; };
 		F60BB5501C34D7B300443DCB /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = F60BB54F1C34D7B300443DCB /* header.png */; };
+		F60BB5571C34F09400443DCB /* JHAPISDK.h in Headers */ = {isa = PBXBuildFile; fileRef = F60BB5541C34F09400443DCB /* JHAPISDK.h */; };
+		F60BB5581C34F09400443DCB /* JHOpenidSupplier.h in Headers */ = {isa = PBXBuildFile; fileRef = F60BB5551C34F09400443DCB /* JHOpenidSupplier.h */; };
+		F60BB5591C34F09400443DCB /* JuheApisSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F60BB5561C34F09400443DCB /* JuheApisSDK.a */; };
+		F60BB55B1C34F0A700443DCB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60BB55A1C34F0A700443DCB /* CoreTelephony.framework */; };
+		F60BB55D1C34F0AF00443DCB /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60BB55C1C34F0AF00443DCB /* AdSupport.framework */; };
+		F60BB55F1C34F0B600443DCB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60BB55E1C34F0B600443DCB /* CoreLocation.framework */; };
+		F60BB5611C34F0E000443DCB /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F60BB5601C34F0E000443DCB /* libc++.tbd */; };
 		F6174C661C3362B700100F27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6174C651C3362B700100F27 /* AppDelegate.swift */; };
 		F6174C681C3362B700100F27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6174C671C3362B700100F27 /* ViewController.swift */; };
 		F6174C6D1C3362B700100F27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6174C6C1C3362B700100F27 /* Assets.xcassets */; };
@@ -127,6 +134,11 @@
 		F6174E8E1C33D93700100F27 /* KindDetailFoodHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6174E8D1C33D93700100F27 /* KindDetailFoodHeaderCell.swift */; };
 		F6174E901C33DA7000100F27 /* KindDetailFoodDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6174E8F1C33DA7000100F27 /* KindDetailFoodDoCell.swift */; };
 		F6174E921C33FADE00100F27 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = F6174E911C33FADE00100F27 /* back.png */; };
+		F6FDC7751C35000E0026329A /* ExpressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FDC7741C35000E0026329A /* ExpressVC.swift */; };
+		F6FDC7771C3500E60026329A /* ExpressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FDC7761C3500E60026329A /* ExpressModel.swift */; };
+		F6FDC7791C35019A0026329A /* ExpressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FDC7781C35019A0026329A /* ExpressCell.swift */; };
+		F6FDC77D1C3503E70026329A /* ExpressDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FDC77C1C3503E70026329A /* ExpressDetailVC.swift */; };
+		F6FDC77F1C3515A30026329A /* ExpressDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FDC77E1C3515A30026329A /* ExpressDetailCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +161,13 @@
 /* Begin PBXFileReference section */
 		F60BB54D1C34D31500443DCB /* KindDetailHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KindDetailHeaderCell.swift; sourceTree = "<group>"; };
 		F60BB54F1C34D7B300443DCB /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
+		F60BB5541C34F09400443DCB /* JHAPISDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHAPISDK.h; sourceTree = "<group>"; };
+		F60BB5551C34F09400443DCB /* JHOpenidSupplier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHOpenidSupplier.h; sourceTree = "<group>"; };
+		F60BB5561C34F09400443DCB /* JuheApisSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = JuheApisSDK.a; sourceTree = "<group>"; };
+		F60BB55A1C34F0A700443DCB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		F60BB55C1C34F0AF00443DCB /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		F60BB55E1C34F0B600443DCB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F60BB5601C34F0E000443DCB /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		F6174C621C3362B700100F27 /* Food.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Food.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6174C651C3362B700100F27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6174C671C3362B700100F27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -275,6 +294,11 @@
 		F6174E8D1C33D93700100F27 /* KindDetailFoodHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KindDetailFoodHeaderCell.swift; sourceTree = "<group>"; };
 		F6174E8F1C33DA7000100F27 /* KindDetailFoodDoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KindDetailFoodDoCell.swift; sourceTree = "<group>"; };
 		F6174E911C33FADE00100F27 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		F6FDC7741C35000E0026329A /* ExpressVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressVC.swift; sourceTree = "<group>"; };
+		F6FDC7761C3500E60026329A /* ExpressModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressModel.swift; sourceTree = "<group>"; };
+		F6FDC7781C35019A0026329A /* ExpressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressCell.swift; sourceTree = "<group>"; };
+		F6FDC77C1C3503E70026329A /* ExpressDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressDetailVC.swift; sourceTree = "<group>"; };
+		F6FDC77E1C3515A30026329A /* ExpressDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressDetailCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +306,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F60BB5611C34F0E000443DCB /* libc++.tbd in Frameworks */,
+				F60BB55F1C34F0B600443DCB /* CoreLocation.framework in Frameworks */,
+				F60BB55D1C34F0AF00443DCB /* AdSupport.framework in Frameworks */,
+				F60BB55B1C34F0A700443DCB /* CoreTelephony.framework in Frameworks */,
+				F60BB5591C34F09400443DCB /* JuheApisSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,9 +331,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F60BB5511C34F02E00443DCB /* SDKS */ = {
+			isa = PBXGroup;
+			children = (
+				F60BB5521C34F09400443DCB /* include */,
+				F60BB5561C34F09400443DCB /* JuheApisSDK.a */,
+			);
+			path = SDKS;
+			sourceTree = "<group>";
+		};
+		F60BB5521C34F09400443DCB /* include */ = {
+			isa = PBXGroup;
+			children = (
+				F60BB5531C34F09400443DCB /* JuheApisSDK */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		F60BB5531C34F09400443DCB /* JuheApisSDK */ = {
+			isa = PBXGroup;
+			children = (
+				F60BB5541C34F09400443DCB /* JHAPISDK.h */,
+				F60BB5551C34F09400443DCB /* JHOpenidSupplier.h */,
+			);
+			path = JuheApisSDK;
+			sourceTree = "<group>";
+		};
 		F6174C591C3362B700100F27 = {
 			isa = PBXGroup;
 			children = (
+				F60BB5601C34F0E000443DCB /* libc++.tbd */,
+				F60BB55E1C34F0B600443DCB /* CoreLocation.framework */,
+				F60BB55C1C34F0AF00443DCB /* AdSupport.framework */,
+				F60BB55A1C34F0A700443DCB /* CoreTelephony.framework */,
 				F6174C641C3362B700100F27 /* Food */,
 				F6174C791C3362B700100F27 /* FoodTests */,
 				F6174C841C3362B700100F27 /* FoodUITests */,
@@ -325,7 +384,8 @@
 		F6174C641C3362B700100F27 /* Food */ = {
 			isa = PBXGroup;
 			children = (
-				F6174DC11C33851E00100F27 /* Main.storyboard */,
+				F6FDC7701C34FF980026329A /* Express */,
+				F60BB5511C34F02E00443DCB /* SDKS */,
 				F6174DCC1C33B7E900100F27 /* Resource */,
 				F6174DC71C33B44800100F27 /* Category */,
 				F6174C991C33689C00100F27 /* Vender */,
@@ -336,6 +396,7 @@
 				F6174C6E1C3362B700100F27 /* LaunchScreen.storyboard */,
 				F6174C711C3362B700100F27 /* Info.plist */,
 				F6174E351C33CA6400100F27 /* PrefixHeader.pch */,
+				F6174DC11C33851E00100F27 /* Main.storyboard */,
 			);
 			path = Food;
 			sourceTree = "<group>";
@@ -628,6 +689,42 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		F6FDC7701C34FF980026329A /* Express */ = {
+			isa = PBXGroup;
+			children = (
+				F6FDC7711C34FF980026329A /* Controller */,
+				F6FDC7721C34FF980026329A /* Model */,
+				F6FDC7731C34FF980026329A /* View */,
+			);
+			path = Express;
+			sourceTree = "<group>";
+		};
+		F6FDC7711C34FF980026329A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6FDC7741C35000E0026329A /* ExpressVC.swift */,
+				F6FDC77C1C3503E70026329A /* ExpressDetailVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6FDC7721C34FF980026329A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F6FDC7761C3500E60026329A /* ExpressModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F6FDC7731C34FF980026329A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F6FDC7781C35019A0026329A /* ExpressCell.swift */,
+				F6FDC77E1C3515A30026329A /* ExpressDetailCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -657,9 +754,11 @@
 				F6174E6C1C33D10800100F27 /* AFNetworkReachabilityManager.h in Headers */,
 				F6174E2D1C33C9EB00100F27 /* UIScrollView+MJRefresh.h in Headers */,
 				F6174E701C33D10800100F27 /* AFURLConnectionOperation.h in Headers */,
+				F60BB5571C34F09400443DCB /* JHAPISDK.h in Headers */,
 				F6174E0F1C33C9EB00100F27 /* MJRefreshComponent.h in Headers */,
 				F6174E841C33D10800100F27 /* UIKit+AFNetworking.h in Headers */,
 				F6174E7E1C33D10800100F27 /* UIAlertView+AFNetworking.h in Headers */,
+				F60BB5581C34F09400443DCB /* JHOpenidSupplier.h in Headers */,
 				F6174E131C33C9EB00100F27 /* MJRefreshHeader.h in Headers */,
 				F6174E1F1C33C9EB00100F27 /* MJRefreshBackStateFooter.h in Headers */,
 				F6174E2B1C33C9EB00100F27 /* UIScrollView+MJExtension.h in Headers */,
@@ -839,8 +938,10 @@
 				F6174E661C33D10800100F27 /* AFHTTPRequestOperation.m in Sources */,
 				F6174E2E1C33C9EB00100F27 /* UIScrollView+MJRefresh.m in Sources */,
 				F6174E2C1C33C9EB00100F27 /* UIScrollView+MJExtension.m in Sources */,
+				F6FDC77D1C3503E70026329A /* ExpressDetailVC.swift in Sources */,
 				F6174E221C33C9EB00100F27 /* MJRefreshGifHeader.m in Sources */,
 				F6174CD91C336C3400100F27 /* KindCell.swift in Sources */,
+				F6FDC77F1C3515A30026329A /* ExpressDetailCell.swift in Sources */,
 				F6174E7D1C33D10800100F27 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				F6174E261C33C9EB00100F27 /* MJRefreshStateHeader.m in Sources */,
 				F6174E7B1C33D10800100F27 /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -864,12 +965,14 @@
 				F6174E901C33DA7000100F27 /* KindDetailFoodDoCell.swift in Sources */,
 				F6174E861C33D10800100F27 /* UIProgressView+AFNetworking.m in Sources */,
 				F6174E301C33C9EB00100F27 /* UIView+MJExtension.m in Sources */,
+				F6FDC7791C35019A0026329A /* ExpressCell.swift in Sources */,
 				F6174E791C33D10800100F27 /* README.md in Sources */,
 				F6174CD61C33689C00100F27 /* UIImage+Extension.swift in Sources */,
 				F6174CD11C33689C00100F27 /* KingfisherOptionsInfo.swift in Sources */,
 				F6174E0C1C33C9EB00100F27 /* MJRefreshAutoFooter.m in Sources */,
 				F6174C661C3362B700100F27 /* AppDelegate.swift in Sources */,
 				F6174E681C33D10800100F27 /* AFHTTPRequestOperationManager.m in Sources */,
+				F6FDC7751C35000E0026329A /* ExpressVC.swift in Sources */,
 				F6174E881C33D10800100F27 /* UIRefreshControl+AFNetworking.m in Sources */,
 				F6174E201C33C9EB00100F27 /* MJRefreshBackStateFooter.m in Sources */,
 				F6174E6A1C33D10800100F27 /* AFHTTPSessionManager.m in Sources */,
@@ -884,6 +987,7 @@
 				F6174E2A1C33C9EB00100F27 /* MJRefreshConst.m in Sources */,
 				F6174CCB1C33689C00100F27 /* ImageCache.swift in Sources */,
 				F6174DB81C337A6400100F27 /* KindDetailCell.swift in Sources */,
+				F6FDC7771C3500E60026329A /* ExpressModel.swift in Sources */,
 				F6174E0E1C33C9EB00100F27 /* MJRefreshBackFooter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1021,6 +1125,10 @@
 				INFOPLIST_FILE = Food/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Food/SDKS",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.vsea.www.Food;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Food/PrefixHeader.pch";
@@ -1035,6 +1143,10 @@
 				INFOPLIST_FILE = Food/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Food/SDKS",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.vsea.www.Food;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Food/PrefixHeader.pch";

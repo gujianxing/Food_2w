@@ -23,7 +23,10 @@ class KindDetailFoodVC: UIViewController,UITableViewDataSource,UITableViewDelega
     @IBOutlet weak var MainView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.requestData()
+        //聚合
+        let jh = JHOpenidSupplier.shareSupplier()
+        jh.registerJuheAPIByOpenId("JHbd494dc0cc99ce603826cfefc35fd3e1")
+        self.jhRequest()
         
         //当UITableView.backgroundColor和cell?.backgroundColor同时设为UIColor.clearColor()时 才会透明
         self.MainView.backgroundColor = UIColor.clearColor()
@@ -117,16 +120,20 @@ class KindDetailFoodVC: UIViewController,UITableViewDataSource,UITableViewDelega
     }
     
     
-    func requestData() {
-        let manager = AFHTTPRequestOperationManager()
-        print(self.id)
-        manager.GET("http://apis.juhe.cn/cook/queryid?key=6835098e6656cfaf74320c786833c650&id=\(self.id)", parameters: nil, success: { (operation, objects) -> Void in
-            self.dealWithData(objects)
-            }) { (operation, error) -> Void in
-                
-        }
+    func jhRequest() {
+        let path = "http://apis.juhe.cn/cook/queryid"
+        let api_id = "46"
+        let method = "GET"
+        let param = ["dtype":"json","id":self.id]
+        let jhAPI = JHAPISDK.shareJHAPISDK()
         
+        jhAPI.executeWorkWithAPI(path, APIID: api_id, parameters: param as [NSObject : AnyObject], method: method, success: { (objects) -> Void in
+            self.dealWithData(objects)
+            }) { (error) -> Void in
+                print(error)
+        }
     }
+
     
     func dealWithData(objects:AnyObject) {
         let dic:NSDictionary = objects["result"] as! NSDictionary
@@ -135,16 +142,28 @@ class KindDetailFoodVC: UIViewController,UITableViewDataSource,UITableViewDelega
         self.model = KindDetailFoodModel()
         self.model.setValuesForKeysWithDictionary(dicFood as! [String : AnyObject])
         
-        dispatch_async(dispatch_get_main_queue()) { () -> Void in
-            self.MainView.reloadData()
-            if self.model.albums != nil {
-                let url = NSURL(string: self.model.albums![0] as! String)
-                self.picture.kf_setImageWithURL(url!, placeholderImage: UIImage(named: "back"))
+        dispatch_async(dispatch_get_main_queue()) { [weak self]() -> Void in
+            if let weakSelf = self {
+                weakSelf.MainView.reloadData()
+                if weakSelf.model.albums != nil {
+                    let url = NSURL(string: weakSelf.model.albums![0] as! String)
+                    weakSelf.picture.kf_setImageWithURL(url!, placeholderImage: UIImage(named: "back"))
+                }
+                
             }
         }
     }
     
     
+    func requestData() {
+        let manager = AFHTTPRequestOperationManager()
+        manager.GET("http://apis.juhe.cn/cook/queryid?key=6835098e6656cfaf74320c786833c650&id=\(self.id)", parameters: nil, success: { (operation, objects) -> Void in
+            self.dealWithData(objects)
+            }) { (operation, error) -> Void in
+                
+        }
+        
+    }
     
     
     

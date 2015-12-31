@@ -16,9 +16,14 @@
 
 
 
+//聚合
+#import "JHAPISDK.h"
+#import "JHOpenidSupplier.h"
+
 
 //只需导入一个头文件
 #import "MJRefresh.h"
-
 //需要哪个导入哪个
 #import "AFHTTPRequestOperationManager.h"
+
+

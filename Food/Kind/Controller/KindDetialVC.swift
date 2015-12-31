@@ -24,8 +24,13 @@ class KindDetialVC: UIViewController,UICollectionViewDataSource,UICollectionView
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //聚合
+        let jh = JHOpenidSupplier.shareSupplier()
+        jh.registerJuheAPIByOpenId("JHbd494dc0cc99ce603826cfefc35fd3e1")
+        self.jhRequest()
+        
+        
         self.MainView.backgroundColor = BLUE
-        self.requestData()
         
         
     }
@@ -90,6 +95,37 @@ class KindDetialVC: UIViewController,UICollectionViewDataSource,UICollectionView
         }else {
             let size = CGSizeMake(CELLWIDTH, CELLHEIGHT)
             return size
+        }
+    }
+    
+    func jhRequest() {
+        let path = "http://apis.juhe.cn/cook/index"
+        let api_id = "46"
+        let method = "GET"
+        let param = ["dtype":"json","cid":self.cid]
+        let jhAPI = JHAPISDK.shareJHAPISDK()
+        
+        jhAPI.executeWorkWithAPI(path, APIID: api_id, parameters: param as [NSObject : AnyObject], method: method, success: { (objects) -> Void in
+            self.dealWithData(objects)
+            }) { (error) -> Void in
+                print(error)
+        }
+    }
+    
+    
+    func dealWithData(objects:AnyObject) {
+        let dics:NSDictionary = objects["result"] as! NSDictionary
+        let arr:NSArray = dics["data"] as! NSArray
+        for dicDetail in arr {
+            let model = KindDetailModel()
+            model.setValuesForKeysWithDictionary(dicDetail as! [String : AnyObject])
+            self.dataSource.addObject(model)
+        }
+        
+        dispatch_async(dispatch_get_main_queue()) { [weak self]() -> Void in
+            if let weakSelf = self {
+                weakSelf.MainView.reloadData()
+            }
         }
     }
     

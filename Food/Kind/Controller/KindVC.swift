@@ -28,9 +28,13 @@ class KindVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     var frame = CGRectZero
     override func viewDidLoad() {
         super.viewDidLoad()
+        //聚合
+        let jh = JHOpenidSupplier.shareSupplier()
+        jh.registerJuheAPIByOpenId("JHbd494dc0cc99ce603826cfefc35fd3e1")
+        self.jhRequest()
+        
         //collectionview添加约束时 要选择top view和bottom view
-        //collectionview.frame所获取到的frame  高度真实的frame低64
-        self.requestData()
+        //collectionview.frame所获取到的frame  高度比真实的frame低64
         self.MainView.backgroundView = UIImageView(image: UIImage(named: "back"))
         let effect = UIBlurEffect(style: .Light)
         let effectView = UIVisualEffectView(effect: effect)
@@ -136,33 +140,70 @@ class KindVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
 //        <#code#>
 //    }
     
-    
-    func requestData() {
-        let request = Request.shareWithRequest()
-        request.getRequestWithString("http://apis.juhe.cn/cook/category?key=6835098e6656cfaf74320c786833c650")
-        request.getRequest = {
-            [weak self] (dic:NSMutableDictionary)->Void in
-            if let weakSelf = self {
-                let arrs:NSArray = dic["result"] as! NSArray
-                for dic in arrs {
-                    let model = KindModel()
-                    model.setValuesForKeysWithDictionary(dic as! [String : AnyObject])
-                    weakSelf.dataSource.addObject(model)
+    func jhRequest() {
+        let path = "http://apis.juhe.cn/cook/category"
+        let api_id = "46"
+        let method = "GET"
+        let param = ["dtype":"json"]
+        let jhAPI = JHAPISDK.shareJHAPISDK()
+        
+        jhAPI.executeWorkWithAPI(path, APIID: api_id, parameters: param as [NSObject : AnyObject], method: method, success: { (objects) -> Void in
+            self.dealWithData(objects)
+            }) { (error) -> Void in
+                print(error)
                 }
-                weakSelf.listSource = weakSelf.dataSource[0].list as! NSMutableArray
-                //主线程刷新界面  否则异常卡顿
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    weakSelf.MainView.reloadData()
-                    weakSelf.ListView.reloadData()
-                })
-            }
-        }
-        
-        
-        
     }
     
     
+    func dealWithData(objects:AnyObject) {
+        let arrs:NSArray = objects["result"] as! NSArray
+        for dic in arrs {
+            let model = KindModel()
+            model.setValuesForKeysWithDictionary(dic as! [String : AnyObject])
+            self.dataSource.addObject(model)
+        }
+        self.listSource = self.dataSource[0].list as! NSMutableArray
+        dispatch_async(dispatch_get_main_queue()) { [weak self]() -> Void in
+            if let weakSelf = self {
+                weakSelf.MainView.reloadData()
+                weakSelf.ListView.reloadData()
+            }
+        }
+    }
+    
+    
+    
+    
+//    func requestData() {
+//        let request = Request.shareWithRequest()
+//        request.getRequestWithString("http://apis.juhe.cn/cook/category?key=6835098e6656cfaf74320c786833c650")
+//        request.getRequest = {
+//        
+//            [weak self] (dic:NSMutableDictionary)->Void in
+//        
+//            if let weakSelf = self {
+//                let arrs:NSArray = dic["result"] as! NSArray
+//                for dic in arrs {
+//                    let model = KindModel()
+//                    model.setValuesForKeysWithDictionary(dic as! [String : AnyObject])
+//                    weakSelf.dataSource.addObject(model)
+//                }
+//                weakSelf.listSource = weakSelf.dataSource[0].list as! NSMutableArray
+//                //主线程刷新界面  否则异常卡顿
+//                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//                    weakSelf.MainView.reloadData()
+//                    weakSelf.ListView.reloadData()
+//                })
+//            }
+//        }
+//        
+//        
+//    }
+    
+
+    
+    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
