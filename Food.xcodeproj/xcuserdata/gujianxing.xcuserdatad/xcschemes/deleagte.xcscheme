@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F6174C611C3362B700100F27"
-               BuildableName = "Food.app"
-               BlueprintName = "Food"
+               BlueprintIdentifier = "F6FEEF781C3CF050009478D7"
+               BuildableName = "deleagte.app"
+               BlueprintName = "deleagte"
                ReferencedContainer = "container:Food.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F6174C751C3362B700100F27"
-               BuildableName = "FoodTests.xctest"
-               BlueprintName = "FoodTests"
+               BlueprintIdentifier = "F6FEEF8B1C3CF050009478D7"
+               BuildableName = "deleagteTests.xctest"
+               BlueprintName = "deleagteTests"
                ReferencedContainer = "container:Food.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +42,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F6174C801C3362B700100F27"
-               BuildableName = "FoodUITests.xctest"
-               BlueprintName = "FoodUITests"
+               BlueprintIdentifier = "F6FEEF961C3CF051009478D7"
+               BuildableName = "deleagteUITests.xctest"
+               BlueprintName = "deleagteUITests"
                ReferencedContainer = "container:Food.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -52,9 +52,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F6174C611C3362B700100F27"
-            BuildableName = "Food.app"
-            BlueprintName = "Food"
+            BlueprintIdentifier = "F6FEEF781C3CF050009478D7"
+            BuildableName = "deleagte.app"
+            BlueprintName = "deleagte"
             ReferencedContainer = "container:Food.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -75,18 +75,13 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F6174C611C3362B700100F27"
-            BuildableName = "Food.app"
-            BlueprintName = "Food"
+            BlueprintIdentifier = "F6FEEF781C3CF050009478D7"
+            BuildableName = "deleagte.app"
+            BlueprintName = "deleagte"
             ReferencedContainer = "container:Food.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
-         <AdditionalOption
-            key = "NSZombieEnabled"
-            value = "YES"
-            isEnabled = "YES">
-         </AdditionalOption>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
@@ -99,9 +94,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F6174C611C3362B700100F27"
-            BuildableName = "Food.app"
-            BlueprintName = "Food"
+            BlueprintIdentifier = "F6FEEF781C3CF050009478D7"
+            BuildableName = "deleagte.app"
+            BlueprintName = "deleagte"
             ReferencedContainer = "container:Food.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

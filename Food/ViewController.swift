@@ -10,11 +10,17 @@ import UIKit
 let WIDTH = UIScreen.mainScreen().bounds.size.width
 let HEIGHT = UIScreen.mainScreen().bounds.size.height
 let BLUE = UIColor(colorLiteralRed: 115 / 255.0, green: 208/255.0, blue: 251/255.0, alpha: 1.0)
+let BOUNDS = UIScreen.mainScreen().bounds
 class ViewController: UIViewController {
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.translucent = false
+        
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
